@@ -1,0 +1,9 @@
+FROM alpine
+
+ENV vol /myvol
+
+RUN mkdir $vol
+
+RUN echo "Persist data" > $(vol)/test
+
+VOLUME $vol
